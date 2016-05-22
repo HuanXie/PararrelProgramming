@@ -1,0 +1,36 @@
+the masured execution time is average value of 5 test results.
+
+sequential execution time of program ( 1 thread ) 
+matrix size 15000 :   1.20077 seconds
+matrix size 16500 :   1.6375 seconds
+matrix size 18000 :   1.71465 seconds
+
+execution time of program ( 2 threads )
+matrix size 15000 :   0.71934  seconds
+matrix size 16500 :   0.844514 seconds
+matrix size 18000 :   1.05756 seconds
+
+execution time of program ( 3 threads )
+matrix size 15000 :   0.68200 seconds
+matrix size 16500 :   0.762737 seconds
+matrix size 18000 :   0.92614 seconds
+
+
+execution time of program ( 4 threads )
+matrix size 15000 :   0.60864 seconds
+matrix size 16500 :   0.735167 seconds
+matrix size 18000 :   0.880803  seconds
+
+
+execution time of program ( 8 threads )
+matrix size 15000 :   0.621216 seconds
+matrix size 16500 :   0.745127 seconds
+matrix size 18000 :   0.893443  seconds
+
+In these example test results we can se, execution of program with 2 threads speed up 1.8 times 
+of sequential program. And with increasing number of threads, the speedup is decreasing.
+This senario meets the Amdahl's law. Pararell pragraming reduces the execution time of program.
+But with 8 threads, the execution time is langer than which with 4 threads. In theory, with more
+threads, the execution time of prgram will decrease slowly, but in reality, the execution time is increasing.
+The reason for this should be that if there are too many threads, the context switch between 
+threads will waste the time. 

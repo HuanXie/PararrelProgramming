@@ -1,0 +1,1 @@
+matrixSum.o: ../matrixSum.c
